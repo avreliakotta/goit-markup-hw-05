@@ -29,12 +29,14 @@
           >
           <ul class="nav-list list">
             <li class="item">
-              <a href="./index.html" class="nav-link link">Studio</a>
+              <a href="./index.html" class="nav-link link current">Studio</a>
             </li>
             <li class="item">
               <a href="./portfolio.html" class="nav-link link">Portfolio</a>
             </li>
-            <li class="item"><a href="" class="nav-link link">Contacts</a></li>
+            <li class="item">
+              <a href="" class="nav-link link">Contacts</a>
+            </li>
           </ul>
         </nav>
         <address class="contact">
@@ -56,7 +58,9 @@
     <main>
       <section class="hero">
         <h1 class="hero-title">Effective Solutions for Your Business</h1>
-        <button type="button" class="hero-button">Order Service</button>
+        <button type="button" class="hero-button" data-modal-open>
+          Order Service
+        </button>
       </section>
       <!--Benefits section-->
       <section class="benefits-section section">
@@ -145,6 +149,7 @@
           </ul>
         </div>
       </section>
+      <!--Our team section-->
       <section class="team-section section">
         <div class="container">
           <h2 class="section-title">Our Team</h2>
@@ -158,7 +163,7 @@
                   height="260"
                   class="card-img"
                 />
-                <div class="content">
+                <div class="content-team content">
                   <h3 class="card-title centered">Mark Guerrero</h3>
                   <p class="card-text centered">Product Designer</p>
                   <ul class="content-list list">
@@ -203,7 +208,7 @@
                   height="260"
                   class="card-img"
                 />
-                <div class="content">
+                <div class="content-team content">
                   <h3 class="card-title centered">Tom Ford</h3>
                   <p class="card-text centered">Frontend Developer</p>
                   <ul class="content-list list">
@@ -248,7 +253,7 @@
                   height="260"
                   class="card-img"
                 />
-                <div class="content">
+                <div class="content-team content">
                   <h3 class="card-title centered">Camila Garcia</h3>
                   <p class="card-text centered">Marketing</p>
                   <ul class="content-list list">
@@ -293,7 +298,7 @@
                   height="260"
                   class="card-img"
                 />
-                <div class="content">
+                <div class="content-team content">
                   <h3 class="card-title centered">Daniel Wilson</h3>
                   <p class="card-text centered">UI Designer</p>
 
@@ -383,6 +388,16 @@
           </ul>
         </div>
       </section>
+      <!--Modal window-->
+      <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+          <button class="modal-close-btn" type="button" data-modal-close>
+            <svg class="modal-close-icon" width="8" height="8">
+              <use href="./images/icons.svg#icon-close-black"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
     </main>
     <footer class="end-page">
       <div class="footer-container container">
@@ -430,5 +445,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
